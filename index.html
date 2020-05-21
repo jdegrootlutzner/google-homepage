@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        footer {
+            z-index: 0;
+            position: fixed;
+            background-color: rgb(244,244,244);
+            border-top: rgb(228,228,228);
+            border-width: thin;
+            border-style: solid;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            min-width: 385px;
+
+        }
+        .box-container {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            width: 100%;
+            min-width: 385px;
+        }
+        .left {
+            justify-content: flex-start;
+        }
+        .right{
+            justify-content: flex-end;
+        }
+        /* .center{
+            width: 500px;
+        } */
+        .box-item {
+            margin: 10px;
+            min-width: max-content;
+        }
+        nav, footer{
+            display: flex;
+            flex-direction: row;
+        }
+
+        body {
+            font-family: arial, sans-serif;
+            margin-left: 0 auto;
+            color: #5F6368;
+            font-size: 11px;
+        }
+        main {
+            z-index: 1;
+            min-width: 800px;
+            top: 120px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin: 0 auto;
+
+
+        }
+        .search-container{
+            display: flex;
+            background-color: white;
+            display: row;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(223,225,229);
+            border-radius: 50px;
+            justify-content: center;
+
+
+        }
+        .search-image {
+            border-radius: 50%;
+        }
+        button {
+            background-color: rgb(244,244,244);
+            color: #5F6368;
+            border: none;
+            border-radius: 2px;
+            padding: 8px;
+            padding-right: 15px;
+            padding-left: 15px;
+
+            margin: 5px;
+            margin-top: 25px;
+        }
+
+        input {
+            width: 300px;
+            border: none;
+        }
+        input:focus{
+            outline: none;
+        }
+
+        @media(max-width: 450px){
+            nav{
+                visibility: hidden;
+            }
+        }
+/* 
+        @media (max-width: 800px){
+            main {
+                position: fixed;
+                top: 170px;
+
+                left: 120px;
+            }
+        }
+        @media (min-width: 800px){
+           main{
+
+           }
+        } */
+
+
+    </style>
+
+</head>
+
+<body>
+    <nav> 
+        <div class="box-container left">
+            <div class= "box-item">
+                About
+            </div>
+            <div class= "box-item">
+                Store
+            </div>
+        </div>
+        <!-- <div class="center">
+            
+        </div> -->
+        <div class="box-container right">
+            <div class= "box-item">
+                Gmail
+            </div>
+            <div class= "box-item">
+                Images
+            </div>
+            <img src="assets/button-32x32.png" alt="button">
+            <div class= "box-item">
+                Profile
+            </div>
+        </div>
+    </nav>
+
+    <main> 
+
+        <div>
+            <img
+            src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
+            alt="Google Logo">
+        </div>
+        <div class="search-container">
+            <img class="search-image" src="assets/magnifying-glass-31x31.png"
+            style="width:31px; height: auto;",>
+            <input type="text">
+            <img class="search-image" src="assets/mic-35x35.png">
+        </div>
+        <div class="box-container">
+            <div>
+                <button type="submit">Google Search</button> 
+            </div>
+            <div>
+                <button type="submit">I'm Feeling Lucky</button> 
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <div class="box-container left">
+            <div class= "box-item">
+                Advertising
+            </div>
+            <div class= "box-item">
+                Business
+            </div>
+            <div class= "box-item">
+                How Search works
+            </div>
+        </div>
+        <!-- <div class="center">
+            
+        </div> -->
+        <div class="box-container right">
+            <div class= "box-item">
+                Privacy
+            </div>
+            <div class= "box-item">
+                Terms
+            </div>
+            <div class= "box-item">
+                Settings
+            </div>
+
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
